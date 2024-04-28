@@ -113,4 +113,4 @@ function amountToCoins(amount, coins) {
     return result;
 }
 
-console.log(amountToCoins(amount, [5000, 1000, 500, 100, 75, 50, 20, 10, 5, 2, 1])); 
+alert(amountToCoins(amount, [5000, 1000, 500, 100, 75, 50, 20, 10, 5, 2, 1])); 
