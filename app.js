@@ -94,3 +94,23 @@ for(i=0;i<library.length;i++)
 }
 
 
+
+let amount = Number(prompt("Enter the amount:"));
+function amountToCoins(amount, coins) {
+    let result = [];
+    let remainingAmount = amount;
+
+    coins.sort((a, b) => b - a);
+
+    for (let i = 0; i < coins.length; i++) {
+        const coin = coins[i];
+        while (remainingAmount >= coin) {
+            result.push(coin);
+            remainingAmount -= coin;
+        }
+    }
+
+    return result;
+}
+
+console.log(amountToCoins(amount, [5000, 1000, 500, 100, 75, 50, 20, 10, 5, 2, 1])); 
